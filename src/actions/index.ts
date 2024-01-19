@@ -10,8 +10,10 @@ export const editSnippet = async (snippet: snippet) => {
     const returnSnippet = await db.snippet.update({ where: { id: snippet.id }, data: { code: snippet.code } });
 
     // console.log('Return snip = ', returnSnippet);
-    revalidatePath(`/snippets/${snippet.id}`);
-    revalidatePath(`/snippets/${snippet.id}/edit`);
+    // JEFF_TEMP
+    // revalidatePath(`/snippets/${snippet.id}`);
+    // JEFF_TEMP
+    // revalidatePath(`/snippets/${snippet.id}/edit`);
 
     redirect(`/snippets/${snippet.id}`);
     return returnSnippet;
@@ -22,7 +24,8 @@ export const deleteSnippet = async (id: number) => {
     //
     const result = await db.snippet.delete({ where: { id } });
     // console.log('Delete result = ', result);
-    revalidatePath(`/`);
+    // JEFF_TEMP
+    //revalidatePath(`/`);
     redirect('/');
 };
 
@@ -71,7 +74,8 @@ export const createSnippet = async (formState: { message: string }, formData: Fo
         };
     }
 
-    revalidatePath('/');
+    // JEFF_TEMP
+    //revalidatePath('/');
     redirect('/');
     // If you take out the redirect for testing - then need to return the message object
     // return {

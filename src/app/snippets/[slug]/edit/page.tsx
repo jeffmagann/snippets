@@ -4,11 +4,12 @@ import { db } from '@/db';
 import SnippetEditForm from '@/components/snippet-edit-form';
 
 //************   generateStaticParams   ********************/
-export async function generateStaticParams() {
-    const snippets = await db.snippet.findMany();
-    const retSnippets = snippets.map((snippet) => ({ snippet }));
-    return retSnippets;
-}
+// JEF_TEMP
+// export async function generateStaticParams() {
+//     const snippets = await db.snippet.findMany();
+//     const retSnippets = snippets.map((snippet) => ({ snippet }));
+//     return retSnippets;
+// }
 
 const SnippetEditPage = async ({ params }: SnippetsShowPageProps) => {
     console.log('[SnippetEditPage entered]');

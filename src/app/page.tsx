@@ -2,6 +2,9 @@ import { db } from '@/db';
 //import Image from 'next/image';
 import Link from 'next/link';
 
+// JEFF_TEMP
+export const revalidate = 10;
+
 export default async function HomePage() {
     const snippets = await db.snippet.findMany({});
 

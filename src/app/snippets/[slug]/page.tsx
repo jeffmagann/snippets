@@ -10,11 +10,12 @@ export interface SnippetsShowPageProps {
 }
 
 //************   generateStaticParams   ********************/
-export async function generateStaticParams() {
-    const snippets = await db.snippet.findMany();
-    const retSnippets = snippets.map((snippet) => ({ slug: snippet.id.toString() }));
-    return retSnippets;
-}
+// JEF_TEMP
+// export async function generateStaticParams() {
+//     const snippets = await db.snippet.findMany();
+//     const retSnippets = snippets.map((snippet) => ({ slug: snippet.id.toString() }));
+//     return retSnippets;
+// }
 
 //*************************************************/
 //***************    SnippetsShowPage            **************/
