@@ -3,7 +3,8 @@ import { db } from '@/db';
 import Link from 'next/link';
 
 // JEFF_TEMP
-export const revalidate = 10;
+//export const revalidate = 10;
+export const dynamic = 'force-dynamic';
 
 export default async function HomePage() {
     const snippets = await db.snippet.findMany({});
