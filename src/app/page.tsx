@@ -16,7 +16,7 @@ export default async function HomePage() {
                         className='bg-blue-200 px-4 py-1 rounded-md shadow-md shadow-gray-500
                                 active:translate-y-1 active:shadow-none'
                     >
-                        Create Page
+                        Create Page!
                     </Link>
                 </div>
             </div>
